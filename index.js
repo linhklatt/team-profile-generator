@@ -1,7 +1,7 @@
 // bringing in inquirer
 const fs = require("fs");
 const inquirer = require("inquirer");
-
+const generateList = require("./src/generateList");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -116,3 +116,25 @@ const addTeamMembers = () => {
     });
 };
 //endpoint = loop employee array = convert into html
+const writeFile = (data) => {
+  fs.writeFile("./dist/index.html", data, (err) => {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      console.log("Team profile is successfully created on index.html");
+    }
+  });
+};
+
+addTeamMembers()
+  .then(addTeamMembers)
+  .then((employeeArray) => {
+    return generateList(employeeArray);
+  })
+  .then((fileHtml) => {
+    return writeFile(fileHtml);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
