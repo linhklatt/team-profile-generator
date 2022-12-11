@@ -1,6 +1,6 @@
 // bringing in inquirer
 const fs = require("fs");
-const inquirer = require("inquirer");
+const inquirer = import("inquirer");
 const generateList = require("./src/generateList");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -127,7 +127,7 @@ const writeFile = (data) => {
   });
 };
 
-addTeamMembers()
+addTeamManager()
   .then(addTeamMembers)
   .then((employeeArray) => {
     return generateList(employeeArray);

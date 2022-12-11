@@ -1,6 +1,6 @@
 // const { it } = require("node:test");
 
-const Intern = requirer("./lib/intern");
+const Intern = requirer("./lib/Intern");
 
 describe("Testing intern Class", () => {
   it("should be able to create instance", () => {

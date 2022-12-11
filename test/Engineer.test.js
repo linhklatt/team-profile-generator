@@ -1,6 +1,6 @@
 // const { it } = require("node:test");
 
-const Engineer = requirer("./lib/engineer");
+const Engineer = requirer("./lib/Engineer");
 
 describe("Testing engineer Class", () => {
   it("should be able to create instance", () => {
