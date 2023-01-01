@@ -1,6 +1,6 @@
 // bringing in inquirer
 const fs = require("fs");
-const inquirer = import("inquirer");
+const inquirer = require("inquirer");
 const generateList = require("./src/generateList");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -67,7 +67,7 @@ const addTeamMembers = () => {
       {
         type: "input",
         message: "Please enter team member's id!",
-        name: "email",
+        name: "id",
       },
 
       {
@@ -83,7 +83,7 @@ const addTeamMembers = () => {
       {
         type: "input",
         message: "Please enter intern's school",
-        name: "github",
+        name: "school",
       },
       {
         type: "confirm",
@@ -100,7 +100,7 @@ const addTeamMembers = () => {
         employee = new Engineer(name, id, email, github);
         console.log(employee);
       } else if (role === "Intern") {
-        employee = new Intern(name, id, email, github);
+        employee = new Intern(name, id, email, school);
         console.log(employee);
       } else if (role === "I do not want to add any more team member") {
         console.log(employeeArray);

@@ -24,13 +24,13 @@ const addEngineer = function (engineerInfo) {
       <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
           <div class="card-header">
           <div class="name">${engineerInfo.name}</div>
-          <div class="position">Manager</div>
+          <div class="position">Engineer</div>
       </div>
           <div class="card-body bg-light">
               <div class="subCard text-white bg-primary mb-3" style="max-width: 18rem;">
               <div class="id card-header">ID: ${engineerInfo.id}</div>
               <div class="email card-header">Email: ${engineerInfo.email}</div>
-              <div class="email card-header">Office Number: ${engineerInfo.github}</div>
+              <div class="email card-header">Github: ${engineerInfo.github}</div>
           </div>
       </div>
       </div>
@@ -42,13 +42,13 @@ const addIntern = function (internInfo) {
         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
             <div class="card-header">
             <div class="name">${internInfo.name}</div>
-            <div class="position">Manager</div>
+            <div class="position">Intern</div>
         </div>
             <div class="card-body bg-light">
                 <div class="subCard text-white bg-primary mb-3" style="max-width: 18rem;">
                 <div class="id card-header">ID: ${internInfo.id}</div>
                 <div class="email card-header">Email: ${internInfo.email}</div>
-                <div class="email card-header">Office Number: ${internInfo.school}</div>
+                <div class="email card-header">School: ${internInfo.school}</div>
             </div>
         </div>
         </div>
